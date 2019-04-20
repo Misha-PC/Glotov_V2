@@ -20,10 +20,6 @@ int main(){
   arr[2].print();
 
 
-  // arr[0].writeFile(toFile, "/home/misha/cpp/Glotov4/test.txt");
-
-  // std::string  kaka = arr[0].readFile("/home/misha/cpp/Glotov4/test.txt");
-  // std::cout << kaka << '\n';
 /*  //uncoment if code not work
   char end_;
   std::cin >> end_;
@@ -31,9 +27,3 @@ int main(){
 
   return 0;
 }
-
-/*
-git add bookkeeping.cpp  bookkeeping.h  main.cpp  README.md
-git commit -m "$1"
-git push -u origin master
-*/

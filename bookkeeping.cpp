@@ -42,20 +42,6 @@ void Bookkeeping::writeFile(std::string context, std::string fileName)
   file.close();
 }
 
-/*
-std::string Bookkeeping::readFile(std::string fileName)
-{
-  std::fstream file(fileName);
-
-  std::string line, outLine;
-
-  while (getline(file, line))
-  {
-    outLine += line + "\n";
-  }
-  return(outLine);
-}
-*/
 
 void Bookkeeping::readFile(std::string fileName)
 {
@@ -68,9 +54,7 @@ void Bookkeeping::readFile(std::string fileName)
     outLine[i++] = line;
   }
 
-  Bookkeeping::setName(outLine[0]);
-  Bookkeeping::setAge(stoi(outLine[1]));
-  Bookkeeping::setMoney(stod(outLine[2]));
+  Bookkeeping::setMeta(outLine[0], stoi(outLine[1]), stod(outLine[2]));
 }
 
 
