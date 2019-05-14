@@ -3,7 +3,7 @@
 #include "bookkeeping.h"
 
 int main(){
-  Bookkeeping* arr = new Bookkeeping[3];
+  Bookkeeping* arr = new Bookkeeping[4];
   arr[0].setName("Nadejda");
   arr[0].setAge(41);
   arr[0].setMoney(50000);
@@ -19,11 +19,13 @@ int main(){
   arr[1].print();
   arr[2].print();
 
+  std::cout << "******TEST******" << '\n';
 
-/*  //uncoment if code not work
-  char end_;
-  std::cin >> end_;
-*/
+  arr[3] = arr[2]; // перегруженны бинарный оператор
+
+  ++arr[3]; // перегруженны унарный оператор
+
+  std::cout << arr[3] << '\n'; // перегруженны бинарный оператор
 
   return 0;
 }

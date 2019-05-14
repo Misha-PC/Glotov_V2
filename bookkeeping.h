@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 
-
 #ifndef BOOKKEEPING_H
 #define BOOKKEEPING_H
 
@@ -29,8 +28,15 @@ public:
 
   void writeFile(std::string context, std::string fileName);
   void readFile(std::string fileName);
+
+  Bookkeeping & operator= (const Bookkeeping & right);
+  Bookkeeping & operator++();
   // std::string readFile(std::string fileName);
 
   void setMeta(std::string, int, double);
 };
+
+std::ostream& operator<< (std::ostream& out, Bookkeeping& p);
+std::istream& operator>> (std::istream& in, Bookkeeping& p);
+
 #endif
