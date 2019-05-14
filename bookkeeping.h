@@ -11,16 +11,16 @@ private:
   std::string m_name;
   int m_age;
   double m_money;
-public:
 
+public:
   Bookkeeping();
-  ~Bookkeeping();
+ ~Bookkeeping();
 
   void print();
 
   std::string getName();
-  int getAge();
-  double getMoney();
+  int         getAge();
+  double      getMoney();
 
   void setName(std::string name);
   void setAge(int age);
