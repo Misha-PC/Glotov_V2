@@ -3,29 +3,33 @@
 #include "bookkeeping.h"
 
 int main(){
-  Bookkeeping* arr = new Bookkeeping[4];
-  arr[0].setName("Nadejda");
-  arr[0].setAge(41);
-  arr[0].setMoney(50000);
 
-  arr[1].setMeta("Den", 45, 100000);
-  arr[2].readFile("/home/misha/cpp/Glotov4/Nikita.txt");
-  // arr[2].setMeta("Nikita", 18, 5000);
+  Bookkeeping* arr = new Bookkeeping[4]; // выделяем память на 4 объекта(0, 1, 2, 3)
+
+  arr[0].setName("Nadejda");  //
+  arr[0].setAge(41);          //  заполняем поля нулевого объекта
+  arr[0].setMoney(50000);     //
+
+  arr[1].setMeta("Den", 45, 100000); // заполняем все поля первого объекта
+
+  arr[2].readFile("/home/misha/cpp/Glotov4/Nikita.txt"); // заполняем поля второго объекта из файла
 
   std::cout<<    arr[0].getName()   <<
        "\n"<<    arr[0].getAge()    <<
-       "\n"<<    arr[0].getMoney()  <<"\n";
+       "\n"<<    arr[0].getMoney()  <<"\n";   // выводим на экран нулевой объект по полям
+
 
   arr[1].print();
-  arr[2].print();
+  arr[2].print(); //выводм перый и второй объекты
 
-  std::cout << "******TEST******" << '\n';
 
   arr[3] = arr[2]; // перегруженны бинарный оператор
+                   // присваеваем третьему объекту значение полей второго
 
   ++arr[3]; // перегруженны унарный оператор
+            // инкриментируем значение 3го элемента (возраст)
 
   std::cout << arr[3] << '\n'; // перегруженны бинарный оператор
-
+              // выводим в поток значения 3го объекта
   return 0;
 }
