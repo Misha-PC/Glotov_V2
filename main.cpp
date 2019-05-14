@@ -3,6 +3,7 @@
 #include "bookkeeping.h"
 
 int main(){
+  std::cout << __cplusplus << '\n';
 
   Bookkeeping* arr = new Bookkeeping[4]; // выделяем память на 4 объекта(0, 1, 2, 3)
 
@@ -12,7 +13,8 @@ int main(){
 
   arr[1].setMeta("Den", 45, 100000); // заполняем все поля первого объекта
 
-  arr[2].readFile("/home/misha/cpp/Glotov4/Nikita.txt"); // заполняем поля второго объекта из файла
+  // arr[2].readFile("/home/misha/cpp/Glotov4/Nikita.txt"); // заполняем поля второго объекта из файла
+  arr[2].readFile("Nikita.txt"); // заполняем поля второго объекта из файла
 
   std::cout<<    arr[0].getName()   <<
        "\n"<<    arr[0].getAge()    <<
