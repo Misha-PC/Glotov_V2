@@ -76,7 +76,7 @@ void Bookkeeping::readFile(std::string fileName)
 		while (!file.eof() and i < 3) {
 			line = "";
 			getline(file, line);
-			std::cout << "test:" << line << std::endl;
+			// std::cout << "test:" << line << std::endl;
 			outLine[i++] = line;
 		}
 	}
