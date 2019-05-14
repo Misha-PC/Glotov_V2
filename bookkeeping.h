@@ -27,6 +27,7 @@ public:
   void setMoney(int money);
 
   void writeFile(std::string context, std::string fileName);
+  void objectToFile(std::string fileName);
   void readFile(std::string fileName);
 
   Bookkeeping & operator= (const Bookkeeping & right);

@@ -43,6 +43,18 @@ void Bookkeeping::writeFile(std::string context, std::string fileName)
 	file.close();
 }
 
+void Bookkeeping::objectToFile(std::string fileName)
+{
+	std::string	context = "";
+
+	context += m_name + "\n";
+	context += std::to_string(m_age)   + "\n";
+	context += std::to_string(m_money) + "\n";
+
+	Bookkeeping::writeFile(context, fileName);
+
+}
+
 void Bookkeeping::readFile(std::string fileName)
 {
 	std::string line;
