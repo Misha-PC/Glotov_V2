@@ -4,9 +4,9 @@
 #include <sstream>
 #include "bookkeeping.h"
 
-Bookkeeping::Bookkeeping(const Bookkeeping &bookkeeping) : m_name(bookkeeping.m_name), m_age(bookkeeping.m_age)
+Bookkeeping::Bookkeeping(const Bookkeeping &bookkeeping) : m_name(bookkeeping.m_name), m_age(bookkeeping.m_age), m_money(bookkeeping.m_money)
 	{
-		std::cout << "Copy constructor worked here!\n"; 
+		std::cout << "Copy constructor worked here!\n";
 	}
 
 Bookkeeping::Bookkeeping() {std::cout << m_name << "\tinitialized. \n"; }
