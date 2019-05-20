@@ -4,13 +4,19 @@
 #include <sstream>
 #include "bookkeeping.h"
 
-Bookkeeping::Bookkeeping(){	std::cout << m_name << "\tinitialized. \n"; }
+Bookkeeping::Bookkeeping(const Bookkeeping &bookkeeping) : m_name(bookkeeping.m_name), m_age(bookkeeping.m_age)
+	{
+		std::cout << "Copy constructor worked here!\n"; 
+	}
+
+Bookkeeping::Bookkeeping() {std::cout << m_name << "\tinitialized. \n"; }
+
 Bookkeeping::~Bookkeeping(){std::cout << m_name << "\tdestroyed\n";     }
 
 
-std::string Bookkeeping::getName() { return(m_name); }
-double      Bookkeeping::getMoney() { return(m_money); }
-int         Bookkeeping::getAge() { return(m_age); }
+std::string Bookkeeping::getName()  { return(m_name); }
+double      Bookkeeping::getMoney() { return(m_money);}
+int         Bookkeeping::getAge() 	{ return(m_age);  }
 
 void Bookkeeping::setName(std::string name) { m_name = name; }
 void Bookkeeping::setAge(int age) { m_age = age; }

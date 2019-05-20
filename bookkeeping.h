@@ -13,6 +13,9 @@ private:
   double m_money;
 
 public:
+
+  // Bookkeeping::Bookkeeping(const Bookkeeping &bookkeeping) : m_name(bookkeeping.m_name), m_age(bookkeeping.m_age);
+  Bookkeeping(const Bookkeeping &);
   Bookkeeping();
  ~Bookkeeping();
 
