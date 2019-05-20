@@ -33,13 +33,17 @@ int main(){
   arr[3].setName(name3);
   std::cout << "\nObject #4:\n" << arr[3] << '\n';// выводим в поток значения 3го объекта
 
-  Bookkeeping objCopy(arr[3]);
-
-  objCopy.print();
+  Bookkeeping objCopy(arr[3]);                    // создаем экземпляр класса Bookkeeping с именем objCopy вызывая конструктор копирования
+  objCopy += 200;
+  objCopy.print();                                // выводим объект с помощью метода print
 
   arr[1].objectToFile("object.txt");
 
+  delete [] arr;
+
   // system("pause");
+
+
 
   return 0;
 }

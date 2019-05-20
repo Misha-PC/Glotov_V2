@@ -105,13 +105,20 @@ Bookkeeping & Bookkeeping::operator=(const Bookkeeping & right)
 	return *this;
 }
 
-Bookkeeping & Bookkeeping::operator++()
+Bookkeeping & Bookkeeping::operator ++()
 {
 	m_age++;
 	return *this;
 }
 
-std::ostream & operator<< (std::ostream & out, Bookkeeping & p)
+Bookkeeping & Bookkeeping::operator += (int p)
+	 {
+			 m_money += p;
+			 return *this;
+	 }
+
+
+std::ostream & operator << (std::ostream & out, Bookkeeping & p)
 {
 	// out << p.print();
 	out << "Name: " << p.getName() <<

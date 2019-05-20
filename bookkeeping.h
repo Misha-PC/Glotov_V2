@@ -33,8 +33,10 @@ public:
   void objectToFile(std::string fileName);
   void readFile(std::string fileName);
 
-  Bookkeeping & operator= (const Bookkeeping & right);
-  Bookkeeping & operator++();
+  Bookkeeping & operator =  (const Bookkeeping &);
+  Bookkeeping & operator ++ ();
+  Bookkeeping & operator += (int);
+
   // std::string readFile(std::string fileName);
 
   void setMeta(std::string, int, double);
